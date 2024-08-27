@@ -1,0 +1,53 @@
+<ion-header [translucent]="true" class="header">
+  <ion-toolbar color="medium">
+    <ion-title>
+      LAB WORK
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="formContainer1"> 
+    <ion-toolbar color="medium">
+      <ion-title>
+       BMI CALCULATION
+      </ion-title>
+    </ion-toolbar>
+
+  <div class="formContainer2"> 
+    <h2>Enter Your Details :</h2>
+    <br>
+    <div>
+      <img src="https://cdn.shopify.com/s/files/1/0805/6265/1456/files/Benefits-of-the-BMI-Calculator-for-People-of-all-Ages-1024x733.jpg?v=1694636264" alt="Logo" class="logo-image" />
+    </div>
+    <br>
+    <br>
+<div>
+       <h3>Height: {{ height }} cm</h3>
+       
+      </div>
+      <div> 
+          <ion-range min="100" max="250" step="1" (ionChange)="onRangeChange($event)">
+            <ion-label slot="start">100</ion-label>
+            <ion-label slot="end">250</ion-label>
+          </ion-range>
+      </div>
+      <br>
+
+      <div>
+     <h3> Weight: {{ weight }} kg</h3>
+      </div>
+      <div> 
+          <ion-range min="30" max="200" step="1" (ionChange)="onRangeChange1($event)">
+            <ion-label slot="start">30</ion-label>
+            <ion-label slot="end">200</ion-label>
+          </ion-range>
+      </div>
+<br>
+
+  <div>
+    <ion-button  id="button" (click)="presentAlert()">Calculate BMI</ion-button>
+</div>
+</div>
+</div>
+</ion-content>
